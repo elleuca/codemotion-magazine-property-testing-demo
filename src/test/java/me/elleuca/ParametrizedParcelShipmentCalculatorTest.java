@@ -12,10 +12,10 @@ import static org.junit.Assert.assertThat;
 @RunWith(Parameterized.class)
 public class ParametrizedParcelShipmentCalculatorTest {
 
-    private int price;
+    private double price;
     private boolean isFreeShipment;
 
-    public ParametrizedParcelShipmentCalculatorTest(int price, boolean isFreeShipment) {
+    public ParametrizedParcelShipmentCalculatorTest(double price, boolean isFreeShipment) {
         this.price = price;
         this.isFreeShipment = isFreeShipment;
     }
@@ -33,7 +33,10 @@ public class ParametrizedParcelShipmentCalculatorTest {
         return Arrays.asList(new Object[][]{
                 {5, false},
                 {19, false},
+                {19.99, false},
                 {20, true},
+                {20.00, true},
+                {20.01, true},
                 {21, true},
                 {Integer.MAX_VALUE, true}
         });
