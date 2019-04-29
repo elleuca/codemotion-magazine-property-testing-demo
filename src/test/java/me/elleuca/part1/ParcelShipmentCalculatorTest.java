@@ -1,5 +1,6 @@
 package me.elleuca;
 
+import me.elleuca.part1.PostalService;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -8,7 +9,7 @@ import static org.junit.Assert.assertThat;
 public class ParcelShipmentCalculatorTest {
     @Test
     public void ShipmentNotFreeForParcelPriceBelow20Euros() {
-        int price = 5;
+        double price = 19.99;
 
         PostalService postalService = new PostalService();
         boolean isFreeShipment = postalService.isFreeShipment(price);
@@ -18,7 +19,7 @@ public class ParcelShipmentCalculatorTest {
 
     @Test
     public void ShipmentFreeForParcelPriceAbove20Euros() {
-        int price = 20;
+        double price = 20.01;
 
         PostalService postalService = new PostalService();
         boolean isFreeShipment = postalService.isFreeShipment(price);
