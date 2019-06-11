@@ -1,12 +1,16 @@
-package me.elleuca;
+package me.elleuca.part1;
 
-import me.elleuca.part1.PostalService;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * Tests the {@link PostalService#isFreeShipment(double)} method
+ * using simple -- and actually naive -- unit test approach
+ */
 public class ParcelShipmentCalculatorTest {
+
     @Test
     public void ShipmentNotFreeForParcelPriceBelow20Euros() {
         double price = 19.99;

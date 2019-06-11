@@ -1,6 +1,5 @@
-package me.elleuca;
+package me.elleuca.part1;
 
-import me.elleuca.part1.PostalService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -10,6 +9,12 @@ import java.util.Arrays;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * Tests the {@link PostalService#isFreeShipment(double)} method
+ * using parametrized JUnit execution.
+ *
+ * This allows to check more relevant (but "static") input values
+ */
 @RunWith(Parameterized.class)
 public class ParametrizedParcelShipmentCalculatorTest {
 
