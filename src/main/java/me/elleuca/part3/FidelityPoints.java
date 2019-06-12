@@ -37,4 +37,8 @@ public class FidelityPoints {
         return products.stream().map(Product::getBonus).mapToInt(Integer::intValue).sum();
     }
 
+    public int productsCount() {
+        return products.size();
+    }
+
 }
